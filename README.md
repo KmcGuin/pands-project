@@ -2,7 +2,7 @@
 ## **Author: Kealan McGuinness**
 
 # **First Steps**
-### I downloaded the data iris set as a csv from: 
+### I downloaded the iris data set as a csv from: 
 (https://datahub.io/machine-learning/iris)
 ### I was having difficulty getting the data set from the URL provided in the project lesson plan. t wouldn't work on my computer. The above link was mentioned by:
 (https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/)
@@ -120,3 +120,15 @@
 (https://www.cse.msu.edu/~ptan/dmbook/tutorials/tutorial3/tutorial3.html)
 (https://www.freecodecamp.org/news/2f-in-python-what-does-it-mean/)
 (https://www.geeksforgeeks.org/inputoutput-external-file-cc-java-python-competitive-programming/_)
+
+### 2. Saves a histogram of each variable to png files
+
+- I set the figure size to be 12 incheswide by 9 inches high and a resolution of 100 dpi. 
+- In each individual case, I defined the variable I wanted to represent in the histogram - petal length, petal width, sepal width, sepal length and species. 
+- I created 20 bins on the histogram to show the data results over a wide range, with the exception of species. I reduced the bin number to 5 for species as there are only 3 data sets, or species, so a bin number of 5 will reduce the distance between each column. 
+- In each case, I changed the colour and the edge colour and added in title of histogram, a legend, and labels for the x and y axes.
+- I used the plt.savefig command to save each histogram as a PNG file.
+- The file references contains a version of the code used for this.
+
+## *References*
+(https://www.geeksforgeeks.org/box-plot-and-histogram-exploration-on-iris-data/)
