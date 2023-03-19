@@ -132,3 +132,25 @@
 
 ## *References*
 (https://www.geeksforgeeks.org/box-plot-and-histogram-exploration-on-iris-data/)
+
+
+
+
+### 3. Outputs a scatter plot of each pair of variables.
+- I created two different scatter plots, one using the matplotlib module and one using the seaborn module.
+*Matplotlib*
+- In the matplotlib version, I defined the data sets x, y for length and a, b for width. 
+- First I set the scatter plot for the x and y set. This included setting figure size, resolution as well as formatting the data in the output, colour, fontsize, axes labels and title of the output.
+- I then created the scatter plot for a and b set - the petal and sepal width. I then formatted this and plotted it on the same output as the x and y axis.
+
+*Seaborn*
+- To help distinguish more between the species and represent them in different colours, I read that the Seaborn module would do this better.
+- I found code - referenced below - and I adapted it to the Iris data set ,by changing the name of the data sets, adding in the species information and using the hue parameter to set different colours to the species. 
+- I also formatted this scatterplot wit a grid background, a title, and labels on the axes. 
+
+- I saved both Matplotlub and Seaborn scatter plots as PNGs.
+
+## *References*
+(https://www.angela1c.com/projects/iris_project/investigating-the-iris-dataset/)
+(https://www.nickmccullum.com/python-visualization/scatterplot/)
+(https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-32d09a52f322_)

@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import sklearn
 from sklearn import metrics 
+from sklearn.datasets import load_iris
 from pandas.api.types import is_numeric_dtype
 import sys
 
@@ -46,6 +47,7 @@ print(data.describe(include='all'))
 
 # 2. Saves a histogram of each variable to png files
 ''' 
+# Sepal length
 plt.figure(figsize = (12, 9), dpi = (100.0)) # image size, 12wx9h inches
 x = data["sepal length"] # identifies variable
 
@@ -59,7 +61,7 @@ plt.savefig('sepallength.png')
 
 plt.show()
 
-
+# Sepal Width
 plt.figure(figsize = (12, 9), dpi = (100.0)) 
 x = data["sepal width"] 
 
@@ -73,7 +75,7 @@ plt.savefig('sepalwidth.png')
 plt.show()
 
 
-
+# Petal Width
 plt.figure(figsize = (12, 9), dpi = (100.0)) 
 x = data["petal width"] 
 
@@ -86,7 +88,7 @@ plt.savefig('petalwidth.png')
 
 plt.show()
 
-
+# Petal length
 plt.figure(figsize = (12, 9), dpi = (100.0)) 
 x = data["petal length"] 
 
@@ -99,8 +101,7 @@ plt.savefig('petallength.png')
 
 plt.show()
 
-'''
-
+#species
 plt.figure(figsize = (12, 9), dpi = (100.0)) 
 x = data["species"] 
 
@@ -111,4 +112,45 @@ plt.ylabel("Count")
 plt.legend()
 plt.savefig('species.png')
 
+plt.show()
+
+'''
+
+# 3. Outputs a scatter plot of each pair of variables.
+
+# sepal length and petal length scatter plot
+# data sets defined
+x = data["sepal length"] 
+y = data["petal length"]
+
+# plot output formatted by quality and size
+plt.figure(dpi = (100.0), figsize = (10,7))
+
+# additional labelling formatting, including modifying font size
+plt.scatter(x, y, c = 'red', label = 'Sepal and Petal Length')
+plt.title('Sepal v Petal Comparison', fontsize = 25)
+plt.xlabel('Sepal size in cm', fontsize = 15)
+plt.ylabel('Petal size in cm', fontsize = 15)
+plt.legend()
+
+# width comparison
+a = data['sepal width']
+b = data['petal width']
+
+# plot second scatter plot on same graph with width comparison
+plt.scatter(a, b, c = 'green', label = 'Sepal and Petal Width')
+
+plt.legend()
+plt.savefig('Scatterplot MatPlotLib.png')
+plt.show()
+
+# a scatterplot using Seaborn. Set style adds a grid to the output. FacetGrid  are the variables used to structure the plot. 
+# The hue parameter plots the species in different colours. Height sets the height of the plot. 
+# I set the title with .set(Title ...) function.
+sns.set_style("whitegrid") 
+sns.FacetGrid(data, hue='species', height=6).set(title='Sepal v Petal Comparison')\
+.map(plt.scatter, "sepal length", "sepal width",)\
+.add_legend()
+
+plt.savefig('Scatterplot Seaborn.png')
 plt.show()
