@@ -147,8 +147,9 @@
 - To help distinguish more between the species and represent them in different colours, I read that the Seaborn module would do this better.
 - I found code - referenced below - and I adapted it to the Iris data set ,by changing the name of the data sets, adding in the species information and using the hue parameter to set different colours to the species. 
 - I also formatted this scatterplot wit a grid background, a title, and labels on the axes. 
+- I repeated this process to creat a plot comparing petal and sepal width and a second comparing petal and sepal length.
 
-- I saved both Matplotlub and Seaborn scatter plots as PNGs.
+- I saved all Matplotlub and Seaborn scatter plots as PNGs.
 
 ## *References*
 (https://www.angela1c.com/projects/iris_project/investigating-the-iris-dataset/)
