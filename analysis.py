@@ -22,6 +22,7 @@ data = pd.read_csv('/Users/kealanmcguinness/Desktop/pands/pands-project/iris.csv
 
 # data columns are labelled
 data.columns = ['sepal length', 'sepal width', 'petal length', 'petal width', 'species']
+
 """
 # 1. Outputs a summary of each variable to a single text file
 # for each label in the data column, print off the mean, standard deviation, minimum and maximum values. This only works for the numerical columns, not the species column.
@@ -114,7 +115,6 @@ plt.savefig('species.png')
 
 plt.show()
 
-'''
 
 # 3. Outputs a scatter plot of each pair of variables.
 
@@ -162,3 +162,34 @@ sns.FacetGrid(data, hue='species', height=6).set(title='Sepal v Petal Width')\
 
 plt.savefig('Scatterplot Seaborn Sepal v Petal Width.png')
 plt.show()
+
+'''
+# 4. Performs any other analysis you think is appropriate
+
+# (a) Calculate sum, mean and mode of a column
+# It uses the Pandas dataframe methods to simply calculate the sum, mean and mode of the data set. 
+
+sum_data = data["sepal length"].sum() # this adds all values in the colmn and outputs the sum
+mean_data = data["sepal length"].mean() # this gives the mean or average value of the column
+median_data = data["sepal length"].median() # this gives the median or middle value of the column 
+print("The sepal length stats are:" 
+      "\nSum:",sum_data, "\nMean:", mean_data, "\nMedian:",median_data)
+
+
+sum_data = data["sepal width"].sum()
+mean_data = data["sepal width"].mean()
+median_data = data["sepal width"].median()
+print("The sepal width stats are:" 
+      "\nSum:",sum_data, "\nMean:", mean_data, "\nMedian:",median_data)
+
+sum_data = data["petal length"].sum()
+mean_data = data["petal length"].mean()
+median_data = data["petal length"].median()
+print("The petal length stats are:" 
+      "\nSum:",sum_data, "\nMean:", mean_data, "\nMedian:",median_data)
+
+sum_data = data["petal width"].sum()
+mean_data = data["petal width"].mean()
+median_data = data["petal width"].median()
+print("The petal width stats are:" 
+      "\nSum:",sum_data, "\nMean:", mean_data, "\nMedian:",median_data)

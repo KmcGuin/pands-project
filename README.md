@@ -134,8 +134,6 @@
 (https://www.geeksforgeeks.org/box-plot-and-histogram-exploration-on-iris-data/)
 
 
-
-
 ### 3. Outputs a scatter plot of each pair of variables.
 - I created two different scatter plots, one using the matplotlib module and one using the seaborn module.
 *Matplotlib*
@@ -155,3 +153,16 @@
 (https://www.angela1c.com/projects/iris_project/investigating-the-iris-dataset/)
 (https://www.nickmccullum.com/python-visualization/scatterplot/)
 (https://medium.com/analytics-vidhya/exploratory-data-analysis-iris-dataset-32d09a52f322_)
+
+
+### 4. Performs any other analysis you think is appropriate
+
+### (a) Calculate sum, mean and mode of a column
+- this calculates some statistics of each column - petal length, petal width, sepal length and sepal width. 
+- I used the Pandas module to caluclate the sum (total), mean (average) and median (middle value) of the four numerical columns. 
+
+## *References*
+(https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/)
+(https://www.w3schools.com/python/pandas/ref_df_sum.asp)
+(https://www.w3schools.com/python/pandas/ref_df_mean.asp)
+(https://www.w3schools.com/python/pandas/ref_df_median.asp)
