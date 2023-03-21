@@ -166,3 +166,22 @@
 (https://www.w3schools.com/python/pandas/ref_df_sum.asp)
 (https://www.w3schools.com/python/pandas/ref_df_mean.asp)
 (https://www.w3schools.com/python/pandas/ref_df_median.asp)
+
+
+### (b) correltion coefficients matrix
+### This shows the nature of the relationship between the variables of the iris data set. 
+### It shows how similar they are to one another and it displays it as a correlation coefficient between -1 and 1.
+### A correlation coefficient of 1 or -1 show a perfect relationship between variables. In the results, 'sepal length' and 'sepal length' have a correlation of 1 as they have a perfect relationship with one another. Same with each variable when paired with itself.
+### The data.corr() method ignores non-numerical column - ie species.
+
+- I used Seaborn  (sns.heatmap()) to export the correlation coefficient matrix as a heatmap. 
+- I amended the parameters to control the style of the heatmap produced. 
+- I saved the figure as a png. 
+
+## *References*
+(https://realpython.com/numpy-scipy-pandas-correlation-python/)
+(hackersrealm.net/post/iris-dataset-analysis-using-python)
+(https://www.w3schools.com/python/pandas/pandas_correlations.asp_)
+(https://pythonbasics.org/seaborn-heatmap/)
+(https://jakevdp.github.io/PythonDataScienceHandbook/04.08-multiple-subplots.html)
+(https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html)

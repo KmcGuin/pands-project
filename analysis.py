@@ -163,7 +163,7 @@ sns.FacetGrid(data, hue='species', height=6).set(title='Sepal v Petal Width')\
 plt.savefig('Scatterplot Seaborn Sepal v Petal Width.png')
 plt.show()
 
-'''
+
 # 4. Performs any other analysis you think is appropriate
 
 # (a) Calculate sum, mean and mode of a column
@@ -193,3 +193,23 @@ mean_data = data["petal width"].mean()
 median_data = data["petal width"].median()
 print("The petal width stats are:" 
       "\nSum:",sum_data, "\nMean:", mean_data, "\nMedian:",median_data)
+
+      '''
+
+# (b) correlation matrix
+# This shows the nature of the relationship between the variables of the iris data set. 
+# It shows how similar they are to one another and it displays it as a correlation coefficient between -1 and 1.
+# A correlation coefficient of 1 or -1 show a perfect relationship between variables.
+
+corr = data.corr()
+print(corr)
+
+# use seaborn to plot a heat map of the coefficient correlation matrix.
+# Setting annot to True gives numbers in each cell
+# cmap refers to the colour tone of the heat map - set to crest, which give a blue-green colour.
+# Linewidth is the line between each square.
+# plt.subplot creates a single subplot. You could add another plot by yusing plt.subplots(2 ...)
+fig, ax = plt.subplots(figsize=(10,7))
+sns.heatmap(corr, annot=True, cmap = 'crest', linewidth=.5)
+# plt.savefig('Correlation Coefficient matrix.png')
+plt.show()
