@@ -9,12 +9,19 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import plotly.express as px
 import seaborn as sns
 import sklearn
 from sklearn import metrics 
 from sklearn.datasets import load_iris
 from pandas.api.types import is_numeric_dtype
 import sys
+from mpl_toolkits.mplot3d import Axes3D
+from seaborn import pairplot
+from plotly.express import scatter_3d
+
+
+
 
 data = pd.read_csv('/Users/kealanmcguinness/Desktop/pands/pands-project/iris.csv')
 
@@ -214,22 +221,32 @@ sns.heatmap(corr, annot=True, cmap = 'crest', linewidth=.5)
 # plt.savefig('Correlation Coefficient matrix.png')
 plt.show()
 
-      '''     
+      
 # 4(c) Violin plots 
 
 # This shows the density of the data. The bigger parts of the violin represent the more dense parts of the data.
 # The white dot in the middle represents the median, or middle value of the set
 # The grey line represents the interquartile range (IQR), or middle values of the range of data
 # Use seaborn violin plot function
-# define the x and y aves. 
+# define the x and y axes. 
 
-# sns.violinplot(x="species", y="petal length", palette="husl", data=data)
+sns.violinplot(x="species", y="petal length", palette="husl", data=data)
 
-# sns.violinplot(x="species", y="petal width", palette="husl", data=data)
+sns.violinplot(x="species", y="petal width", palette="husl", data=data)
 
-# sns.violinplot(x="species", y="sepal length", palette="husl", data=data)
+sns.violinplot(x="species", y="sepal length", palette="husl", data=data)
 
 sns.violinplot(x="species", y="sepal width", palette="husl", data=data)
 
-plt.savefig('Sepal Width Violin plot.png')
+# plt.savefig('Sepal Width Violin plot.png')
 plt.show()
+ 
+   '''    
+# 4(d) 3D scatterplot
+
+# used in conjunction with 'from plotly.express import scatter_3d' module
+
+px.scatter_3d(data, x='sepal length', y='sepal width', z='petal length', color="species")\
+            .show()
+
+# This opens a result in a web browser - note it has been added to the PNG files of the project under the title '3dscatter.png'

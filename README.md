@@ -200,3 +200,17 @@
 (https://www.statisticshowto.com/probability-and-statistics/interquartile-range/)
 (https://seaborn.pydata.org/generated/seaborn.violinplot.html)
 (https://seaborn.pydata.org/generated/seaborn.husl_palette.html)
+
+
+### (d) 3D scatter plot
+- imported - from plotly.express import scatter_3d - module
+- used px.scatter3d (px is plotly.express) command to create the 3d graph
+- labelled x, y and z axes. 
+- Set colour to represent the species
+- created a result in the web browser - I downloaded and saved it as a PNG called '3dscatter.png'.
+
+## *References*
+(https://stackoverflow.com/questions/66521229/visualization-of-iris-data-set-and-a-model-for-naive-bayes)
+(https://plotly.com/python/3d-scatter-plots/)
+(https://www.delftstack.com/howto/plotly/plotly-3d-scatter-plot/?utm_content=cmp-true_)
+(https://plotly.com/python-api-reference/generated/plotly.express.scatter_3d.html)
