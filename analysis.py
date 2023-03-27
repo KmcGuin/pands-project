@@ -194,9 +194,9 @@ median_data = data["petal width"].median()
 print("The petal width stats are:" 
       "\nSum:",sum_data, "\nMean:", mean_data, "\nMedian:",median_data)
 
-      '''
 
-# (b) correlation matrix
+
+# 4(b) correlation matrix
 # This shows the nature of the relationship between the variables of the iris data set. 
 # It shows how similar they are to one another and it displays it as a correlation coefficient between -1 and 1.
 # A correlation coefficient of 1 or -1 show a perfect relationship between variables.
@@ -212,4 +212,24 @@ print(corr)
 fig, ax = plt.subplots(figsize=(10,7))
 sns.heatmap(corr, annot=True, cmap = 'crest', linewidth=.5)
 # plt.savefig('Correlation Coefficient matrix.png')
+plt.show()
+
+      '''     
+# 4(c) Violin plots 
+
+# This shows the density of the data. The bigger parts of the violin represent the more dense parts of the data.
+# The white dot in the middle represents the median, or middle value of the set
+# The grey line represents the interquartile range (IQR), or middle values of the range of data
+# Use seaborn violin plot function
+# define the x and y aves. 
+
+# sns.violinplot(x="species", y="petal length", palette="husl", data=data)
+
+# sns.violinplot(x="species", y="petal width", palette="husl", data=data)
+
+# sns.violinplot(x="species", y="sepal length", palette="husl", data=data)
+
+sns.violinplot(x="species", y="sepal width", palette="husl", data=data)
+
+plt.savefig('Sepal Width Violin plot.png')
 plt.show()

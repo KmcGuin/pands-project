@@ -185,3 +185,18 @@
 (https://pythonbasics.org/seaborn-heatmap/)
 (https://jakevdp.github.io/PythonDataScienceHandbook/04.08-multiple-subplots.html)
 (https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplots_demo.html)
+
+### (c) violin plots
+- This shows the density of the data. The bigger parts of the violin represent the more dense parts of the data.
+- The white dot in the middle represents the median, or middle value of the set
+- The grey line represents the interquartile range (IQR), or middle values of the range of data
+- Use seaborn.violinplot function as per the link referenced below.
+- Uses the husl colour palette 
+- I created graphs for each of the columns and saved them as PNGs.
+
+## *References*
+(https://www.kaggle.com/code/zachgold/python-iris-data-visualizations)
+(https://mode.com/blog/violin-plot-examples/#:~:text=What%20is%20a%20violin%20plot%3F,the%20density%20of%20each%20variable.)
+(https://www.statisticshowto.com/probability-and-statistics/interquartile-range/)
+(https://seaborn.pydata.org/generated/seaborn.violinplot.html)
+(https://seaborn.pydata.org/generated/seaborn.husl_palette.html)
