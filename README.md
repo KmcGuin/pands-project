@@ -214,3 +214,18 @@
 (https://plotly.com/python/3d-scatter-plots/)
 (https://www.delftstack.com/howto/plotly/plotly-3d-scatter-plot/?utm_content=cmp-true_)
 (https://plotly.com/python-api-reference/generated/plotly.express.scatter_3d.html)
+
+### (e) KDE (Kernel Density Estimation) plots 
+- KDE shows the probablity density function of the non-parametric data variables.
+- this is generated using th jointplot function of seaborn. 
+- it is important to set the 'kind' parameter to 'KDE' to make sure it plots a kenel density estimation.
+- Setting kind to 'KDE' results in both a univariate and bivariate KDE plot.
+- A univariate works with only one variable in a dataset, while a bivariate works with two. There are contours at the top and right hand side of the graph produced, and the data in the middle.
+- I set the colours to blue and red respectively, to distinguish between the petal and sepal results and I used the shade parameter todarken the areas with the highest density.
+- CBar is set to True to create a colour density legend along the graphs.
+
+## *References*
+(https://www.tutorialspoint.com/how-seaborn-library-used-to-display-a-kernel-density-estimation-plot-joinplot-in-python#)
+(https://jakevdp.github.io/PythonDataScienceHandbook/05.13-kernel-density-estimation.html)
+(https://seaborn.pydata.org/generated/seaborn.jointplot.html)
+(https://blog.devgenius.io/exploratory-data-analysis-using-seaborn-part-2-kernel-density-estimation-plot-kde-6087a8552cd0)

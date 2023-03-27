@@ -23,6 +23,7 @@ from plotly.express import scatter_3d
 
 
 
+
 data = pd.read_csv('/Users/kealanmcguinness/Desktop/pands/pands-project/iris.csv')
 
 # print(data) - used to test that it read in the data okay
@@ -241,7 +242,7 @@ sns.violinplot(x="species", y="sepal width", palette="husl", data=data)
 # plt.savefig('Sepal Width Violin plot.png')
 plt.show()
  
-   '''    
+     
 # 4(d) 3D scatterplot
 
 # used in conjunction with 'from plotly.express import scatter_3d' module
@@ -250,3 +251,16 @@ px.scatter_3d(data, x='sepal length', y='sepal width', z='petal length', color="
             .show()
 
 # This opens a result in a web browser - note it has been added to the PNG files of the project under the title '3dscatter.png'
+  '''
+
+# 4(e) KDE (Kernel Density Estimation) plots 
+
+# using Seaborn jointplot function
+# Shade adds depth to the results and cbar adds in a colour legend on results
+
+sns.jointplot(x = 'sepal length',y = 'sepal width', data = data, kind = 'kde', color = 'blue', shade = True, cbar = True)
+sns.jointplot(x = 'petal length',y = 'petal width', data = data, kind = 'kde', color = 'red', shade = True, cbar=True)
+
+# plt.savefig('KDESepal.png')
+
+plt.show()
